@@ -17,8 +17,10 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name');  //نام پروژه
             $table->string('slug');//نام مستعار
-            $table->string('dictionary');//توضیحات
+            $table->string('img');
+            $table->text('dictionary');//توضیحات
             $table->string('capital_required');//   سرمایه لازم
+            $table->string('namber');
             $table->string('amountMain'); //مبلغ اصلی پروژه
             $table->string('AstanQuds');// در صد مشارکت آستان قدس
             $table->String('position');//نهاد

@@ -9,18 +9,25 @@
             <input type="button" value="">
         </div>
         <div class="col-12 margin-left-10 margin-bottom-15 border-radius-3">
-            <p class="box__title">پروژه ها</p>
+
+            <div class="tab__box">
+                <div class="tab__items">
+                    <a class="tab__item is-active" href="{{url('project') }}">پروژه ها</a>
+                    <a class="tab__item " class="btn all-confirm-btn" href="{{url('project/create') }}">ایجادپروژه جدید</a>
+                </div>
+            </div>
             <div class="table__box">
                 <table class="table">
                     <thead role="rowgroup">
                     <tr role="row" class="title-row">
                         <th>شناسه</th>
                         <th> نام پروژه </th>
-                        <th>نام انگلیسی  </th>
+                        <th>نام مستعار  </th>
+                        <td>تصویر</td>
                         <th> توضیحات </th>
-                        <th> سرمایه لازم </th>
+                        <th> سرمایه  </th>
                         <th> مبلغ پروژه </th>
-                        <th> مبلغ پروژه </th>
+                        <th> تعداد سهام </th>
                         <th> مشارکت آستان قدس </th>
                         <th> فاز هایی پروژه   </th>
                         <th> نویسنده </th>

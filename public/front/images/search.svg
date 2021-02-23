@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="339.523" height="253.49" viewBox="0 0 339.523 253.49">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-34" width="339.523" height="253.49" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Scroll_Group_2" data-name="Scroll Group 2" transform="translate(34)" opacity="0.54" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="Page-1" transform="translate(-6 -6)">
+      <g id="icon-111-search" transform="translate(6 6)">
+        <path id="search" d="M207.52,237.537a127.547,127.547,0,1,1,30.017-30.017l83.819,83.819a20.914,20.914,0,0,1,0,29.663l-.351.351a20.994,20.994,0,0,1-29.663,0L207.52,237.537Zm-73.948-6.41a97.555,97.555,0,1,0-97.555-97.555,97.554,97.554,0,0,0,97.555,97.555Z" transform="translate(-6 -6)" fill="#cecece" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,11 +1,5 @@
 @extends('Dashboard::master')
-
-@section('css')
-
-@endsection
 @section('content')
-
-
     <div class="main-content padding-0">
         <p class="box__title">ایجاد پروژه جدید</p>
         <div class="row no-gutters bg-white">
@@ -41,7 +35,7 @@
                             <input type="text" id="search-field" placeholder="برچسب" name="" >
                         </li>
                     </ul>
-                    <textarea placeholder="توضیحات پروژه" class="text h  my-editor" name="" id="editor"></textarea>
+                    <textarea placeholder="توضیحات پروژه" class="text h  my-editor" name="" id="editor" ></textarea>
 
                     <!-- <textarea id="my-editor" name="content" class="form-control">{!! old('content', 'test editor content') !!}</textarea> -->
 
@@ -53,6 +47,4 @@
 
 
 </form>
-
-
 @endsection

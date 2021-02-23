@@ -534,7 +534,7 @@
                             <div class="swiper-slide">
                                 <div class="col-lg-5 video_p">
                                     <video controls>
-                                        <source src="front/images/temp/3.mp4" type="front/video/mp4">
+                                        <source src="front/images/temp/3.mp4" type="video/mp4">
                                     </video>
                                 </div>
                                 <div class="col-lg-7 swiper03_det">

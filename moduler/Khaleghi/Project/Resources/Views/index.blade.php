@@ -9,7 +9,7 @@
             <input type="button" value="">
         </div>
         <div class="col-12 margin-left-10 margin-bottom-15 border-radius-3">
-             
+
 
             <div class="tab__box">
                 <div class="tab__items">
@@ -37,18 +37,17 @@
                     </thead>
                     <tbody>
                         {{-- @foreach($project as $project)
-                            <td> $project->id </td>
-                            <td> $project->name </td>
-                            <td> $project->slug </td>
-                            <td> $project->dictionary </td>
-                            <td> $project->capital_required </td>
-                            <td> $project->amountMain </td>
-                            <td> $project->AstanQuds </td>
-                            <td> $project->position </td>
-                            <td> $project->Phase </td>
-                            <td> $project->author </td>
-
-                            <td> - </td>
+                            <td>{{$project->id}} </td>
+                            <td>{{$project->name}} </td>
+                            <td>{{$project->name}}</td>
+                            <td>{{ $project->dictionary }}</td>
+                            <td> {{$project->capital_required}} </td>
+                            <td> {{$project->amountMain}} </td>
+                            <td> {{$project->AstanQuds}} </td>
+                            <td> {{$project->position}} </td>
+                            <td> {{$project->Phase}} </td>
+                            <td>{{ $project->author }}</td>
+                            <td>  </td>
                         @endforeach --}}
 
                     </tbody>

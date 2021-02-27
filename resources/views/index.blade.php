@@ -34,37 +34,12 @@
                     <div class="navbar-collapse">
                         <nav class="navbar-nav nav navbar-right">
                             <ul id=navigation>
-                                <li class="current-menu-item menu-li"><a href=#>صفحه اصلی</a></li>
+
+                                @foreach($Categories as $item)
                                 <li class=menu-li>
-                                    <span class=menu-flesh>ایجاد پروژه جدید</span>
-                                    <ul class=menu-ul>
-                                        <li class=menu-li>
-                                            <span class=menu-flesh>کارت پستال رضوی</span>
-                                            <ul class=menu-ul>
-                                                <li class=menu-li>
-                                                    <span class=menu-flesh>کارت پستال رضوی</span>
-                                                    <ul class=menu-ul>
-                                                        <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                        <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                        <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class=menu-li>
-                                            <span class=menu-flesh>کارت پستال رضوی</span>
-                                            <ul class=menu-ul>
-                                                <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                                <li class=menu-li><a title href=#>کارت پستال رضوی</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    <a href="{{$item->slug}}">{{$item->title}}</a>
                                 </li>
+                                @endforeach
                                 <li class=menu-li>
                                     <a href=# title>درباره ما</a>
                                 </li>

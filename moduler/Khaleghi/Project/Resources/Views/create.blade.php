@@ -24,8 +24,11 @@
 
                     <div class="file-upload">
                         <div class="i-file-upload">
-                            <span>آپلود تصویر پروژه</span>
-                            <input type="file" class="file-upload" id="files" name="files">
+                            <form action="{{url('laravel-filemanager')}}" enctype="multipart/form-data" method="POST">
+                                <span>آپلود تصویر پروژه</span>
+                                <input type="file" class="file-upload" id="files" name="files" name="submit">
+
+                            </form>
                         </div>
                         <span class="filesize"></span>
                         <span class="selectedFiles">فایلی انتخاب نشده است</span>

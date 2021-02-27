@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $Categories = Category::orderBy('id','DESC')->get();
+        $Categories = Category::orderBy('id')->get();
         return view('index', compact('Categories'));
     }
 }

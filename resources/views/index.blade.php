@@ -40,12 +40,7 @@
                                     <a href="{{$item->slug}}">{{$item->title}}</a>
                                 </li>
                                 @endforeach
-                                <li class=menu-li>
-                                    <a href=# title>درباره ما</a>
-                                </li>
-                                <li class=menu-li>
-                                    <a href=# title>ارتباط با ما</a>
-                                </li>
+                             
                             </ul>
                         </nav>
                     </div>
@@ -179,7 +174,7 @@
             <div class="w-100 parent_slider_last">
                 <div class="row1">
                     <div class="header_slider_last">
-                        <h2 class="h2_slider_last">آخرین پروژه های مشارکتی</h2>
+                        <h2 class="h2_slider_last" id="end_project">آخرین پروژه های مشارکتی</h2>
                         <div class="btn_slider_last">
                             <div class="swiper-button-next02 hidden-xs"><i class="fa fa-angle-right"></i></div>
                             <div class="swiper-button-prev02 hidden-xs"><i class="fa fa-angle-left"></i></div>
@@ -498,7 +493,7 @@
             <div class="w-100 parent_slider_last">
                 <div class="row1">
                     <div class="header_slider_last">
-                        <h2 class="h2_slider_last">محبوبترین پروژه های مشارکتی</h2>
+                        <h2 class="h2_slider_last" id="popular">محبوبترین پروژه های مشارکتی</h2>
                         <div class="btn_slider_last">
                             <div class="swiper-button-next03 hidden-xs"><i class="fa fa-angle-right"></i></div>
                             <div class="swiper-button-prev03 hidden-xs"><i class="fa fa-angle-left"></i></div>

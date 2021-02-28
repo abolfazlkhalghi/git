@@ -1,9 +1,12 @@
 <?php
-
 namespace Khaleghi\Project\Http\Controllers;
-use  Khaleghi\Project\Models\Project;
 
-class ProjectController
+use App\Http\Controllers\Controller;
+use  Khaleghi\Project\Models\Project;
+use Khaleghi\Project\Http\Request\ProjectRequest;
+
+
+class ProjectController extends Controller
 {
     public function index(){
 
@@ -16,10 +19,11 @@ class ProjectController
     public function create(){
         return view('project::create');
     }
-    public function store(CategoryRequest $request)
+    public function store(ProjectRequest $request)
     {
         // todo repository
-        Category::create([
+    
+    project::create([
             'name' => $request->name,
             'slug' => $request->slug,
             'dictionary' => $request->dictionary,
@@ -35,24 +39,28 @@ class ProjectController
         return back();
     }
 
-    public function edit(Category $category)
+    public function edit(Project $project)
     {
         // todo CategoryRepository
-        $categories = Category::where('id', '!=', $category->id)->get();
-        return view('Categories::edit', compact('category', 'categories'));
+
+        return view('project::edit', compact('project'));
     }
 
-    public function update(Category $category, CategoryRequest $request)
+    public function update(Project $projects, ProjectRequest $request)
     {
         // todo repository
-        $category->update([
-            'title' => $request->title,
+        $projects->update([
+            'name' => $request->title,
             'slug' => $request->slug,
-            'parent_id' => $request->parent_id,
         ]);
 
         return back();
     }
+    public function destroy(Project $projects)
+    {
+        $projects->delete();
 
+        return response()->json(['message' => 'عملیات با موفقیت انجام شد.'], \Illuminate\Http\Response::HTTP_OK);
+    }
 
 }

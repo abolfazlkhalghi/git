@@ -15,6 +15,7 @@
                         <th>نام دسته بندی</th>
                         <th>نام انگلیسی دسته بندی</th>
                         <th>دسته پدر</th>
+                        <th>عکس </th>
                         <th>عملیات</th>
                     </tr>
                     </thead>
@@ -25,6 +26,8 @@
                         <td><a href="">{{ $category->title }}</a></td>
                         <td>{{ $category->slug }}</td>
                         <td>{{ $category->parent }}</td>
+                        <td><img src="{{$category->images}}"></td>
+
                         <td>
                             <a href="" onclick="event.preventDefault(); deleteItem(event, '{{ route('categories.destroy', $category->id) }}')" class="item-delete mlg-15" title="حذف"></a>
                             <a href="" target="_blank" class="item-eye mlg-15" title="مشاهده"></a>

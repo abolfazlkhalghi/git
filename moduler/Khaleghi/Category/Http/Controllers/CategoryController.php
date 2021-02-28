@@ -16,14 +16,19 @@ class CategoryController extends Controller
 
     public function store(CategoryRequest $request)
     {
+      $name = $request->name;
+      $slug =$request->slug;
+        $imageName =time().'.'.$image->extends();
+        $image->move(public_path('images'),$imageName); 
         // todo repository
         Category::create([
             'title' => $request->title,
             'slug' => $request->slug,
             'parent_id' => $request->parent_id,
-        ]);
+            'images' => $request->file('file'),
 
-        return back();
+
+            return redirect()->back();
     }
 
     public function edit(Category $category)

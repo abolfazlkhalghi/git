@@ -45,7 +45,6 @@
             "Khaleghi\\User\\": "moduler/Khaleghi/User/",
             "Khaleghi\\Dashboard\\": "moduler/Khaleghi/Dashboard/",
             "Khaleghi\\Category\\": "moduler/Khaleghi/Category/",
-            "Khaleghi\\RolePermissions\\":"moduler/Khaleghi/RolePermissions/",
             "Khaleghi\\Project\\":"moduler/Khaleghi/Project/"
 
 

@@ -181,7 +181,7 @@ return [
         Khaleghi\User\Providers\UserServiceProvider::class,
         Khaleghi\Dashboard\providers\DashboardServiceProvider::class,
         Khaleghi\Category\providers\CategoryServiceProvider::class,
-        Khaleghi\RolePermissions\Providers\RolePermissionsServiceProvider::class,
+        // Khaleghi\RolePermissions\Providers\RolePermissionsServiceProvider::class,
 //        Khaleghi\ACL_Role\providers\ACLRoleServiceProvider::class,
         Khaleghi\Project\providers\ProjectServiceProvider::class,
 

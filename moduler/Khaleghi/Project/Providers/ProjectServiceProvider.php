@@ -10,7 +10,7 @@ public function register()
     $this->loadRoutesFrom(__DIR__ . '/../Routes/project_routes.php');
     $this->loadViewsFrom(__DIR__  .'/../Resources/Views/', 'project');
     $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
- 
+
 }
 
     public function boot()

@@ -1,0 +1,18 @@
+{
+    "name": "khaleghi/front",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Khaleghi\\Front\\" : "src"
+        }
+    
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Khaleghi\\Front\\Providers\\FrontServiceProvider"
+                ]
+        }
+    }
+}
+

@@ -19,8 +19,8 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 
 Route::get('/test', function () {
     $name='manage category_permissions';
-    \Spatie\Permission\Models\Permission::create(['name'=>$name]);
-    auth()->user()->givePermissinTo($name);
+    // \Spatie\Permission\Models\Permission::create(['auther']);
+    auth()->user()->givePermissinTo('auther');
     return auth()->user()->permissions;
 });
 Auth::routes(['verify'=>true]);

@@ -4,7 +4,10 @@ namespace Khaleghi\Project\Http\Controllers;
 use App\Http\Controllers\Controller;
 use  Khaleghi\Project\Models\Project;
 use Khaleghi\Project\Http\Request\ProjectRequest;
-
+use Khaleghi\User\Repositories\UserRepo;
+use Khaleghi\Category\Repositories;
+use Khaleghi\Category\Repositories\CategoryRepo;
+use Khaleghi\Project\Http\Requests\ProjectRequest as RequestsProjectRequest;
 
 class ProjectController extends Controller
 {
@@ -16,51 +19,13 @@ class ProjectController extends Controller
         return view('project::index', compact('projects'));
 
     }
-    public function create(){
-        return view('project::create');
+    public function create(UserRepo $userRepo , CategoryRepo $categoriesRepo){
+        $authers = $userRepo->getauther();
+        $statuss= Project::$status;
+        $categories=$categoriesRepo;
+        return view('project::create', compact('authers','statuss','categories'));
     }
-    public function store(ProjectRequest $request)
-    {
-        // todo repository
-    
-    project::create([
-            'name' => $request->name,
-            'slug' => $request->slug,
-            'dictionary' => $request->dictionary,
-            'capital_required' => $request->capital_required,
-            'amountMain' => $request->amountMain,
-            'AstanQuds' => $request->AstanQuds,
-            'position' => $request->position,
-            'Phase' => $request->Phase,
-            'author' => $request->author,
-            'parent_id' => $request->parent_id,
-        ]);
+    public function store(ProjectRequest $Request){
 
-        return back();
     }
-
-    public function edit(Project $project)
-    {
-        // todo CategoryRepository
-
-        return view('project::edit', compact('project'));
-    }
-
-    public function update(Project $projects, ProjectRequest $request)
-    {
-        // todo repository
-        $projects->update([
-            'name' => $request->title,
-            'slug' => $request->slug,
-        ]);
-
-        return back();
-    }
-    public function destroy(Project $projects)
-    {
-        $projects->delete();
-
-        return response()->json(['message' => 'عملیات با موفقیت انجام شد.'], \Illuminate\Http\Response::HTTP_OK);
-    }
-
 }

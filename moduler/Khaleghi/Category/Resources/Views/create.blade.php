@@ -12,7 +12,7 @@
         <option value="{{ $category->id }}">{{ $category->title }}</option>
         @endforeach
     </select>
-        <input id="file" type="file" class="form-control @error('file') is-invalid @enderror" name="images">
+    
 
     <button class="btn btn-webamooz_net">اضافه کردن</button>
 </form>

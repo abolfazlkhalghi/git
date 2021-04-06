@@ -16,20 +16,16 @@ class CategoryController extends Controller
 
     public function store(CategoryRequest $request)
     {
-      $name = $request->name;
-      $slug =$request->slug;
-        $imageName =time().'.'.$image->extends();
-        $image->move(public_path('images'),$imageName); 
         // todo repository
         Category::create([
             'title' => $request->title,
             'slug' => $request->slug,
             'parent_id' => $request->parent_id,
-            'images' => $request->file('file'),
+        ]);
 
-
-            return redirect()->back();
+        return back();
     }
+
 
     public function edit(Category $category)
     {
@@ -40,16 +36,17 @@ class CategoryController extends Controller
 
     public function update(Category $category, CategoryRequest $request)
     {
+
         // todo repository
-        $category->update([
+    $category->update([
             'title' => $request->title,
             'slug' => $request->slug,
             'parent_id' => $request->parent_id,
         ]);
 
-        return back();
-    }
+    return back();
 
+    }
     public function destroy(Category $category)
     {
         $category->delete();

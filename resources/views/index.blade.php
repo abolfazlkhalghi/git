@@ -40,7 +40,7 @@
                                     <a href="{{$item->slug}}">{{$item->title}}</a>
                                 </li>
                                 @endforeach
-                             
+
                             </ul>
                         </nav>
                     </div>

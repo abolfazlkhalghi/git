@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -6,6 +7,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: irs;
 }
 
 *:before, *:after {
@@ -3675,3 +3677,8 @@ textarea {
  } .mrt-170{
      margin-top:170px;
  }
+ /*** backend*/
+.textcenter {
+    text-align: center;
+    font-family: irs ,;
+  }

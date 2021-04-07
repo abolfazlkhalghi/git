@@ -4,10 +4,10 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
         <div class="form-group">
-            <label for="username">* نام و نام خانوادگی</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" id="username"
-                   name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
-            >
+            <input type="text"  class="txt-l txt " @error('name') is-invalid @enderror" id="username"
+                   name="name" value="{{ old('name') }}"
+                   placeholder="نام کاربری"
+>
 
             @error('name')
             <span class="invalid-feedback" role="alert">
@@ -16,9 +16,9 @@
             @enderror
         </div>
         <div class="form-group last mb-4">
-        <label for="password">* ایمیل</label>
-        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
+        <input type="email" class="txt-l txt  @error('email') is-invalid @enderror" id="email"
                name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+               placeholder="نام کاربری"
         >
             @error('email')
             <span class="invalid-feedback" role="alert">
@@ -28,9 +28,10 @@
 
         </div>
         <div class="form-group last mb-4">
-        <label for="mobile">mobile</label>
-        <input type="text" class="form-control @error('mobile') is-invalid @enderror" id="mobile"
+
+        <input type="text" class="txt-l txt  @error('mobile') is-invalid @enderror" id="mobile"
                name="mobile" value="{{ old('mobile') }}" required autocomplete="mobile" autofocus
+               placeholder="موبایل"
         >
         @error('mobile')
         <span class="invalid-feedback" role="alert">
@@ -40,18 +41,17 @@
 
         </div>
         <div class="form-group last mb-4">
-            <label for="password">* پسورد</label>
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                   name="password" required autocomplete="new-password">
+            <input id="password" type="password" class="txt-l txt  @error('password') is-invalid @enderror"
+                   name="password" required autocomplete="new-password"   placeholder="پسورد">
             @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+
         </div>
         <div class="form-group last mb-4">
-            <label for="password">* تایید پسورد</label>
-            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"">
+            <input id="password-confirm" type="password" class="txt-l txt " name="password_confirmation" required autocomplete="new-password""   placeholder="تاییدیه پسورد">
 
         </div>
         <div class="form-group last mb-4">
@@ -59,14 +59,6 @@
         </div>
         <input type="submit" value="ثبت نام" class="btn btn-pill text-white btn-block btn-primary">
 
-        <span class="d-block text-center my-4 text-muted"> or sign in with</span>
-
-        <div class="social-login text-center">
-
-            <a href="#" class="google">
-                <span class="icon-google mr-3"></span>
-            </a>
-        </div>
     </form>
 
 

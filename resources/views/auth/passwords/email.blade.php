@@ -7,8 +7,9 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">آدرس ایمیل</label>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                <input id="email" type="email" class="txt-l txt @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+                                placeholder="ایمیل">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">

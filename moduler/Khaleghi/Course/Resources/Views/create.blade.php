@@ -1,13 +1,13 @@
 @extends('Dashboard::master')
-{{-- @section('breadcrumb')
-    <li><a href="{{ route('Project.index') }}" title="دوره ها">دوره ها</a></li>
+@section('breadcrumb')
+    <li><a href="{{ route('courses.index') }}" title="دوره ها">دوره ها</a></li>
     <li><a href="#" title="ویرایش دوره">ایجاد دوره</a></li>
-@endsection --}}
+@endsection
 @section('content')
     <div class="row no-gutters  ">
         <div class="col-12 bg-white">
             <p class="box__title">ایجاد دوره</p>
-            <form action="{{ route('project.store') }}" class="padding-30" method="post" enctype="multipart/form-data">
+            <form action="{{ route('courses.store') }}" class="padding-30" method="post" enctype="multipart/form-data">
                 @csrf
                 <x-input name="title" placeholder="عنوان دوره" type="text" required/>
                 <x-input type="text" name="slug" placeholder="نام انگلیسی دوره" class="text-left" required />
@@ -20,9 +20,9 @@
                 </div>
                 <x-select name="teacher_id" required>
                     <option value="">انتخاب مدرس دوره</option>
-                    {{-- @foreach($teachers as $teacher)
+                    @foreach($teachers as $teacher)
                     <option value="{{ $teacher->id }}" @if($teacher->id == old('teacher_id')) selected @endif>{{ $teacher->name }}</option>
-                    @endforeach --}}
+                    @endforeach
                 </x-select>
 
 
@@ -30,7 +30,7 @@
 
                 <x-select name="type" required>
                     <option value="">نوع دوره</option>
-                    @foreach(\Khaleghi\Project\Models\Project::$types as $type)
+                    @foreach(\Cyaxaress\Course\Models\Course::$types as $type)
                         <option value="{{ $type }}"
                                 @if($type == old('type')) selected @endif
                         >@lang($type)</option>
@@ -39,11 +39,11 @@
 
                 <x-select name="status" required>
                     <option value="">وضعیت دوره</option>
-                    {{-- @foreach(\Khaleghi\Project\Models\Project::$statuses as $status)
+                    @foreach(\Cyaxaress\Course\Models\Course::$statuses as $status)
                         <option value="{{ $status }}"
                                 @if($status == old('status')) selected @endif
                         >@lang($status)</option>
-                    @endforeach --}}
+                    @endforeach
                 </x-select>
 
                 <x-select name="category_id" required>

@@ -16,9 +16,9 @@
     <a href="#" id="button-to-top"><i class="fa fa-caret-up"></i></a>
 </footer>
 
-<script src="front/scripts/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="front/plugins/swiper/js/swiper.min.js"></script>
-<script type="text/javascript" src="front/plugins/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript" src="front/scripts/script.js"></script>
+<script src="{{ asset('front/scripts/jquery-1.9.1.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/plugins/swiper/js/swiper.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/plugins/bootstrap/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/scripts/script.js') }}"></script>
 </body>
 </html>

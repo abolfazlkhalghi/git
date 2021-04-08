@@ -14,16 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/','HomeController@index')->name('home');
 Route::get('/admin','AdminController@index')->name('admin');
-Route::prefix('/users')->group(function () {
+Route::prefix('/user')->group(function () {
     Route::get('/','UserController@index')->name('user');
-    Route::get('/login','UserController@login')->name('user.login');
-    Route::get('/register','UserController@register')->name('user.register');
-    Route::get('/restpass','UserController@restpass')->name('user.restpass');
 
 });
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});
+
 
 Route::get('/test', function () {
     $name='manage category_permissions';
@@ -31,5 +26,6 @@ Route::get('/test', function () {
     auth()->user()->givePermissinTo('auther');
     return auth()->user()->permissions;
 });
+Route::group(['middleware' => 'web'], function () {
 Auth::routes(['verify'=>true]);
-
+});

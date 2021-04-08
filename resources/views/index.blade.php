@@ -12,7 +12,7 @@
                                 <a href="#" class="topslider_detail_a">کتابخانه و موزه ملی ملک</a>
                             </h2>
                             <p class="topslider_detail_p">مدیریت امور مجاورین آستان قدس رضوی مرحله دیگری از طرح حمایت از
-                                اقشار آسیب‌پذیر حاشیه شهر مشهد را آغاز کرد
+                                اقشار آسیب‌ پذیر حاشیه شهر مشهد را آغاز کرد
                             </p>
                             <div class="topslider_detail_cat">
                                 <a href="" class="topslider_detail_cat_item" title="فرهنگی">فرهنگی</a>

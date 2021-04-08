@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>جمع سپاری نذر و موقوفات آستان قدس رضوی</title>
-    <link href="front/plugins/bootstrap/bootstrap-rtl.min.css" rel="stylesheet" type="text/css">
-    <link href="front/plugins/bootstrap/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="front/styles/style.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/plugins/bootstrap/bootstrap-rtl.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/plugins/bootstrap/fontawesome5/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/styles/style.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
                     <div class="left-logo float-right">
                         <a href="#" title="کارت پستال رضوی">
                             <figure>
-                                <img class="left-logo-img" src="front/images/astan.svg"
+                                <img class="left-logo-img" src="{{ asset('front/images/astan.svg') }}"
                                      alt="جمع سپاری نذر و موقوفات آستان قدس رضوی"
                                      title="جمع سپاری نذر و موقوفات آستان قدس رضوی"/>
                             </figure>
@@ -58,7 +58,37 @@
                     <div class="reg_box">
                         <i class="fa fa-user"></i>
                         <span class="reg_box_span">
-                            <a href="{{ route('user.login') }}" title="ثبت نام / ورود" class="reg_box_link">ثبت نام / ورود</a>
+                            @guest
+                            <nav id="navigation">
+                                <li class="menu-li">
+                                    <span class="reg_box_link">ثبت نام / ورود</span>
+                                    <ul class="menu-ul">
+                                        <li class="menu-li">
+                                            <a href="{{ route('login') }}"class="reg_box_link">ورود</a>
+
+                                        </li>
+                                        <li class="menu-li">
+                                            <a href="{{ route('register') }}"  class="reg_box_link">ثبت نام </a>
+                                        </li>
+
+                                    </ul>
+                                <div class="dropdown-button"></div></li>
+                            </nav>
+                            @endguest
+
+                            @if(auth())
+                                <a href="javascript:void" onclick="$('#logout-form').submit();" class="logout" title="خروج"></a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+
+                                </form>
+                            @endif
+
+                          
+
+
+
+
                         </span>
                     </div>
                 </div>

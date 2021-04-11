@@ -74,18 +74,17 @@
                                     </ul>
                                 <div class="dropdown-button"></div></li>
                             </nav>
-                            @endguest
+                        @else
+                        <a href="{{ url('/logout') }}" class="reg_box_link"> خروج </a>
 
-                            @if(auth())
-                                <a href="javascript:void" onclick="$('#logout-form').submit();" class="logout" title="خروج"></a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
+                        @endguest
 
-                                </form>
-                            @endif
 
-                          
+                        {{-- <a href="javascript:void" onclick="$('#logout-form').submit();" class="logout btn btn-outline-warning" title="خروج" >خروج</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
 
+                            </form> --}}
 
 
 

@@ -28,4 +28,5 @@ Route::get('/test', function () {
 });
 Route::group(['middleware' => 'web'], function () {
 Auth::routes(['verify'=>true]);
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 });
